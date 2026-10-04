@@ -1,0 +1,58 @@
+[
+  {
+    "id": "atacama-dryness",
+    "prompt": "Atakama nega Mars tadqiqotlari uchun foydali?",
+    "options": ["U yerda tortishish kuchi yo‘q", "O‘ta quruq tuproqda hayot izlarini izlash usullari sinaladi", "Uning atmosferasi Mars bilan bir xil", "U Marsdan Yerga ko‘chib kelgan"],
+    "answer": 1,
+    "explanation": "Atakama quruqligi organik moddalar va hayot izlarini tekshirish uchun analog yaratadi. Bu Yer va Marsning barcha sharoitlari bir xil degani emas.",
+    "locationId": "atacama"
+  },
+  {
+    "id": "rio-tinto-chemistry",
+    "prompt": "Rio Tinto tadqiqotlarining asosiy ahamiyati nimada?",
+    "options": ["Daryoda havo yo‘qligida", "Marsdan kelgan suvda", "Temir va oltingugurtga boy kislotali muhitni o‘rganishda", "Daryo doim muzlab turishida"],
+    "answer": 2,
+    "explanation": "Rio Tinto kimyoviy va biologik analog sifatida ishlatiladi: olimlar kislotali muhitdagi minerallar, mikroorganizmlar va namuna olish usullarini o‘rganadi.",
+    "locationId": "rio-tinto"
+  },
+  {
+    "id": "lanzarote-basalt",
+    "prompt": "Lanzarote lava maydonlari Oyning qaysi xususiyatini tushunishga yordam beradi?",
+    "options": ["Bazaltli qoramtir tekisliklarini", "Okean oqimlarini", "O‘rmonlarini", "Yomg‘irli bulutlarini"],
+    "answer": 0,
+    "explanation": "Lanzarotedagi bazaltli lava Oyning qoramtir maria tekisliklari bilan qiyoslanadi. ESA bu yerda astronavtlarga dala geologiyasini o‘rgatadi.",
+    "locationId": "lanzarote"
+  },
+  {
+    "id": "hanksville-relief",
+    "prompt": "Qadimgi daryo o‘zani qanday qilib baland tizmaga aylanishi mumkin?",
+    "options": ["Oy uni yuqoriga tortadi", "Daryo suvi toshga aylanadi", "Shamol faqat o‘zan tubini ko‘taradi", "O‘zandagi qattiq yotqiziqlar saqlanib, atrofdagi yumshoq jinslar yemiriladi"],
+    "answer": 3,
+    "explanation": "Eroziyaga chidamli daryo yotqiziqlari saqlanadi, atrofdagi yumshoq qatlamlar yemiriladi. Shu sabab eski past o‘zan baland tizma bo‘lib ko‘rinishi mumkin.",
+    "locationId": "hanksville"
+  },
+  {
+    "id": "analog-limits",
+    "prompt": "Yerda Oy yoki Mars analogi borligi nimani anglatadi?",
+    "options": ["Ikki joyning barcha sharoitlari bir xil", "Ayrim jarayon yoki belgilarni qiyoslab, uskunalarni sinash mumkin", "Marsda hayot borligi isbotlangan", "Yerda kosmik skafandrsiz Oyga chiqish mumkin"],
+    "answer": 1,
+    "explanation": "Analog ayrim geologik, kimyoviy yoki amaliy xususiyatlar bo‘yicha qiyoslash imkonini beradi. Atmosfera, radiatsiya va tortishish kabi omillar farq qiladi.",
+    "locationId": "mauna-kea"
+  },
+  {
+    "id": "meteor-crater-training",
+    "prompt": "Meteor Crater nima uchun NASA uchun muhim analog maydon?",
+    "options": ["Uni meteoritlar yig‘ishda ishlatishadi", "Unda zarba krateri tuzilishi o‘lchanadi va astronavtlar mashg‘ulotidan o‘tadi", "Atmosferasi Marsga o‘xshaydi", "U Yerdagi eng chuqur cho‘l"],
+    "answer": 1,
+    "explanation": "Bu kraterda zarba mexanikasi va otilma tarqalishi o‘rganiladi. 1960-yillarda Eugene Shoemaker aynan shu yerda NASA astronavtlarini Apollo uchun tayyorlagan.",
+    "locationId": "meteor-crater"
+  },
+  {
+    "id": "cuatro-cienegas-gypsum",
+    "prompt": "Cuatro Ciénegas nima uchun Marsdagi Gale krateriga analog sifatida qaraladi?",
+    "options": ["Chunki u Oy kratereiga o‘xshaydi", "Chunki u yerda ham suv bug‘lanib gips qoldiqlari hosil bo‘lgan", "Chunki uning relyefi sun’iy yaratilgan", "Chunki u Mars atmosferasini takrorlaydi"],
+    "answer": 1,
+    "explanation": "Gips — suv bug‘langanda cho‘kadigan mineral. Cuatro Ciénegasdagi gips va stromatolitlar, Marsda quruq qoldiqlar topilgan Gale krateridagi suvli o‘tmishni tushunishga yordam beradi.",
+    "locationId": "cuatro-cienegas"
+  }
+]

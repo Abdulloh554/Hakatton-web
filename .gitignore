@@ -1,0 +1,12 @@
+# Local environment files and secrets
+.env.local
+.env
+.env.*.local
+!.env.example
+
+# Dependencies and build outputs
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
