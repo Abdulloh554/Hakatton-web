@@ -5,6 +5,7 @@ import type { Location } from "@hakaton/shared";
 import { Globe } from "./globe";
 import type { GlobeMode } from "./globe-scene";
 import { formatCoordinates, targetClass, targetLabel } from "../lib/catalog";
+import { useAppLanguage } from "./language";
 
 export const TARGET_FILTERS = ["Barchasi", "Mars", "Oy", "Ikkalasi"] as const;
 export type TargetFilter = (typeof TARGET_FILTERS)[number];
@@ -61,16 +62,21 @@ export function AtlasSection({
   onShare: (id: string) => void;
   onResetFilters: () => void;
 }) {
+  const { language } = useAppLanguage();
+  const words = language === "en"
+    ? { eyebrow: "Atlas / real coordinates", title: <>Which place is closer<br /><em>to which world?</em></>, intro: "Rotate the globe, select a pin, or search for a place. Markers use real coordinates.", search: "Place, country, or feature", count: "places found", saved: "Saved" }
+    : language === "ru"
+      ? { eyebrow: "Атлас / реальные координаты", title: <>Какое место ближе<br /><em>к какому миру?</em></>, intro: "Вращайте глобус, выберите точку или найдите место поиском. Метки стоят на реальных координатах.", search: "Место, страна или признак", count: "мест найдено", saved: "Сохранённые" }
+      : { eyebrow: "Atlas / real koordinatalar", title: <>Qaysi joy qaysi<br /><em>olamga yaqin?</em></>, intro: "Globusni aylantiring, nuqtani tanlang yoki qidiruv orqali joy toping. Belgilar haqiqiy koordinata bilan joylashtirilgan.", search: "Joy, davlat yoki belgi", count: "joy topildi", saved: "Saqlangan" };
   return (
     <section className="atlas-section" id="atlas">
       <div className="section-title">
         <div>
-          <p className="eyebrow"><span /> Atlas / real koordinatalar</p>
-          <h2>Qaysi joy qaysi<br /><em>olamga yaqin?</em></h2>
+          <p className="eyebrow"><span /> {words.eyebrow}</p>
+          <h2>{words.title}</h2>
         </div>
         <p>
-          Globusni aylantiring, nuqtani tanlang yoki qidiruv orqali joy toping. Belgilar haqiqiy
-          koordinata bilan joylashtirilgan.
+          {words.intro}
         </p>
       </div>
       <div className="atlas-shell">
@@ -81,7 +87,7 @@ export function AtlasSection({
               aria-label="Lokatsiya qidirish"
               value={query}
               onChange={(event) => onQuery(event.target.value)}
-              placeholder="Joy, davlat yoki belgi"
+              placeholder={words.search}
             />
           </label>
           <div className="chip-row" role="group" aria-label="Kosmik manzil filtri">
@@ -112,7 +118,7 @@ export function AtlasSection({
             </button>
           </div>
           <p className="result-count" role="status">
-            {visible.length} joy topildi
+            {visible.length} {words.count}
             {scope === "saved" ? " (saqlanganlar)" : ""}
           </p>
           <div className="location-list">
