@@ -2,7 +2,7 @@ import { Compass, House, Send } from "lucide-react";
 import ProfileSettings from "./profile-settings";
 import { useAppLanguage } from "./language";
 
-const LANDING_URL = process.env.NEXT_PUBLIC_LANDING_URL || "http://localhost:3100";
+const LANDING_URL = process.env.NEXT_PUBLIC_LANDING_URL || "https://hakatton-landing.vercel.app";
 
 /** Slim chrome for the atlas app: navigation only, the marketing hero lives in the landing app. */
 export function AppHeader({ botUsername }: { botUsername?: string }) {

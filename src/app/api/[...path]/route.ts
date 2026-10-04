@@ -12,7 +12,7 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
     if (value) headers.set(key, value);
   }
   try {
-    const upstream = await fetch(`${process.env.API_URL ?? "http://127.0.0.1:4000"}/api/${path.join("/")}${request.nextUrl.search}`, {
+    const upstream = await fetch(`${process.env.API_URL ?? "https://hakatton-backend.onrender.com"}/api/${path.join("/")}${request.nextUrl.search}`, {
       method: request.method, headers,
       body: ["GET", "HEAD"].includes(request.method) ? undefined : await request.text(),
       cache: "no-store", redirect: "error", signal: AbortSignal.timeout(10000),
